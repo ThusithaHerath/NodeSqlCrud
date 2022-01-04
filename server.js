@@ -12,6 +12,13 @@ app.listen('8070',()=>{
     console.log('server is running..');
 })
 
+//import user routes
+
+const userRoutes=require('./src/routes/user.route');
+
+//create user route
+
+app.use('/api/user',userRoutes);
 
 //Rest API working
 
