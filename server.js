@@ -8,7 +8,7 @@ var app = express();
 app.use(cors());
 app.use(bodyparser.json());
 
-app.listen('3000',()=>{
+app.listen('8070',()=>{
     console.log('server is running..');
 })
 
@@ -30,19 +30,19 @@ db.connect((err)=>{
 })
 
 
-//Rest API Crud
+//Rest API working
 
-app.get('/api',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('Api working');
 });
 
 
-//create 
+// //create 
 
-app.post('/api/create/',(req,res)=>{
-   console.log(req.body);
-   //sql query 
+// app.post('/api/create/',(req,res)=>{
+//    console.log(req.body);
+//    //sql query 
 
-   //let sql = 'INSERT INTO User (username, email, password, create_time) VALUES ( '${req.body.id}','${req.body.username}','${req.body.email}','${req.body.password}','${req.body.create_time}' )';
-});
+//    //let sql = 'INSERT INTO User (username, email, password, create_time) VALUES ( '${req.body.id}','${req.body.username}','${req.body.email}','${req.body.password}','${req.body.create_time}' )';
+// });
 
