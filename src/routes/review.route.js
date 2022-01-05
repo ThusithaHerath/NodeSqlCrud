@@ -6,7 +6,7 @@ const ReviewController=require('../controller/review.controller');
 //add new review 
 router.post('/addReview',ReviewController.addNewReview);
 
-//update restaurant 
+//update review 
 router.put('/updateReview/:id',ReviewController.updateReviewData);
 
 //delete review
