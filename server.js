@@ -12,23 +12,6 @@ app.listen('8070',()=>{
     console.log('server is running..');
 })
 
-//mysql database connection
-
-var db = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    databse:'nodecrud'
-});
-
-//check db connection 
-db.connect((err)=>{
-    if(err) throw err;
-    else{
-        console.log('database connected successfully');
-    }
-})
-
 
 //Rest API working
 
