@@ -12,11 +12,11 @@ router.get('/:username',userController.getUserByName);
 
 //add new user 
 
-router.post('/',userController.addNewUser);
+router.post('/addUser',userController.addNewUser);
 
 //update employee 
-router.put('/:id',userController.updateUser);
+router.put('/updateUser/:id',userController.updateUser);
 
 //delete user
-router.delete('/:id',userController.deleteUser);
+router.delete('/deleteUser/:id',userController.deleteUser);
 module.exports=router;

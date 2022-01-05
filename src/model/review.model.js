@@ -66,7 +66,7 @@ Review.getDataByID = (_id, result)=>{
 
 //get all reviews by Reviewer _id 
 Review.getDataByReviewerID = (_id, result)=>{
-    dbConn.query('SELECT user._id, user.username, restaurant._id, restaurant.name, review.rating, review.review FROM review INNER JOIN restaurant ON review.restaurantID=restaurant._id INNER JOIN review.reviewerID=user._id where user._id=?', _id,(err,res)=>{
+    dbConn.query('SELECT user._id, user.username, restaurant._id, restaurant.name, review.rating, review.review FROM review INNER JOIN restaurant ON review.restaurantID=restaurant._id INNER JOIN user ON review.reviewerID=user._id where user._id=?', _id,(err,res)=>{
         if(err){
             console.log('Error while fetching data by id',err);
             result(null, err);

@@ -4,7 +4,7 @@ const router = express.Router();
 const RestaurantController = require('../controller/restaurant.controller');
 
 //get all restaurant details
-router.get('/',RestaurantController.getRestaurantDetails);
+router.get('/displayRestaurant',RestaurantController.getRestaurantDetails);
 
 
 //get  all restaurant details by _id
@@ -17,12 +17,12 @@ router.get('/:name',RestaurantController.getgetRestaurantDetailsByName);
 router.get('/:cuisine',RestaurantController.getgetRestaurantDetailsByCuisine);
 
 //add new restaurant 
-router.post('/',RestaurantController.addNewRestaurant);
+router.post('/addRestaurant',RestaurantController.addNewRestaurant);
 
 //update restaurant 
-router.put('/:id',RestaurantController.updateRestaurantData);
+router.put('/updateRestaurant/:id',RestaurantController.updateRestaurantData);
 
 //delete restaurant
-router.delete('/:id',RestaurantController.deleteURestarantdata);
+router.delete('/deleteRestaurant/:id',RestaurantController.deleteURestarantdata);
 
 module.exports = router;
