@@ -5,12 +5,12 @@ const mysql=require('mysql');
 const dbConn=mysql.createConnection({
     host:'localhost',
     user:'root',
-    pass:'',
+    password:'',
     database:'nodecrud'
 });
 
 //check db connection 
-db.connect((err)=>{
+dbConn.connect((err)=>{
     if(err) throw err;
     else{
         console.log('Database connected successfully');
