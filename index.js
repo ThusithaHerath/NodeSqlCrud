@@ -22,8 +22,13 @@ app.listen(port, ()=>{
 });
 
 //import user routes
-
 const userRoutes = require('./src/routes/user.route');
-
 //create user url 
 app.use('/api/users', userRoutes);
+
+
+//import restaurant routes 
+const restaurantRotues = require('./src/routes/restaurant.route');
+//create restaurant url
+app.use('/api/restaurant',restaurantRotues); 
+
