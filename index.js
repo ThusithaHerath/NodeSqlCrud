@@ -32,3 +32,9 @@ const restaurantRotues = require('./src/routes/restaurant.route');
 //create restaurant url
 app.use('/api/restaurant',restaurantRotues); 
 
+
+//import review routes
+const reviewRoutes = require('./src/routes/review.route');
+//create review url
+app.use('/api/review',reviewRoutes); 
+

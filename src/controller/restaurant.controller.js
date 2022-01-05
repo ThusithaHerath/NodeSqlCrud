@@ -1,4 +1,3 @@
-const Restuarant = require('../model/restaurant.model');
 const RestaurantModel= require('../model/restaurant.model');
 
 //get all restaurant details
